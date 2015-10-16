@@ -1,0 +1,12 @@
+{
+    "name": "videoEventPolyfill",
+    "version": "0.1.0",
+    "main": "./lib/video-event-polyfill",
+    "browserify": {
+        "transform": ["babelify"]
+    },
+    "dependencies": {
+        "babelify": "^6.1.3",
+        "browserify": "~2.35"
+    }
+}
