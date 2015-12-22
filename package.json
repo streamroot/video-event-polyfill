@@ -1,6 +1,20 @@
 {
-    "name": "videoEventPolyfill",
+    "name": "video-event-polyfill",
     "version": "0.1.0",
+    "description": "polyfill for unconsistent events of HTML5 video API",
+    "homepage": "https://github.com/streamroot/video-event-polyfill",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:streamroot/video-event-polyfill.git"
+    },
+    "author": "Axel Delmas",
+    "keywords": [
+        "html5",
+        "video",
+        "events",
+        "polyfill"
+    ],
+    "license": "ISC",
     "main": "./lib/video-event-polyfill",
     "browserify": {
         "transform": ["babelify"]
