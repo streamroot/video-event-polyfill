@@ -1,6 +1,6 @@
 {
   "name": "video-event-polyfill",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "polyfill for unconsistent events of HTML5 video API",
   "homepage": "https://github.com/streamroot/video-event-polyfill",
   "repository": {
@@ -10,7 +10,10 @@
   "scripts": {
     "build": "mkdir -p dist && browserify lib/video-event-polyfill.js | uglifyjs > dist/video-event-polyfill.js"
   },
-  "author": "Axel Delmas",
+  "author": {
+    "name": "Streamroot",
+    "email": "contact@streamroot.io"
+  },
   "keywords": [
     "html5",
     "video",
