@@ -1,17 +1,32 @@
 # video-event-polyfill
 Polyfill for unconsistent events of HTML5 video API
 
+
+## Installation
+
+```sh
+npm install --save video-event-polyfill
+```
+
+## Build
+
+The dist file is generated with the following command:
+
+```sh
+npm run build
+```
+
 # Basic Usage
 
 ``` js
 var polyfill = new VideoEventPolyfill(video);
-polyfill.on(VideoEventPolyfill.Events.WAITING, function () { 
+polyfill.on(VideoEventPolyfill.Events.WAITING, function () {
   // Handle waiting event
 });
-polyfill.on(VideoEventPolyfill.Events.PLAYING, function () { 
+polyfill.on(VideoEventPolyfill.Events.PLAYING, function () {
   // Handle playing event
 });
-polyfill.on(VideoEventPolyfill.Events.ENDED, function () { 
+polyfill.on(VideoEventPolyfill.Events.ENDED, function () {
   //Handle ended event
 });
 ```
