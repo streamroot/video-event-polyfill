@@ -1,26 +1,40 @@
 {
-    "name": "video-event-polyfill",
-    "version": "0.1.0",
-    "description": "polyfill for unconsistent events of HTML5 video API",
-    "homepage": "https://github.com/streamroot/video-event-polyfill",
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com:streamroot/video-event-polyfill.git"
-    },
-    "author": "Axel Delmas",
-    "keywords": [
-        "html5",
-        "video",
-        "events",
-        "polyfill"
+  "name": "video-event-polyfill",
+  "version": "0.1.0",
+  "description": "polyfill for unconsistent events of HTML5 video API",
+  "homepage": "https://github.com/streamroot/video-event-polyfill",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:streamroot/video-event-polyfill.git"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && browserify provider.js | uglifyjs > dist/jw7-hlsjs-provider.js"
+  },
+  "author": "Axel Delmas",
+  "keywords": [
+    "html5",
+    "video",
+    "events",
+    "polyfill"
+  ],
+  "license": "ISC",
+  "main": "./lib/video-event-polyfill",
+  "browserify": {
+    "transform": [
+      "babelify"
     ],
-    "license": "ISC",
-    "main": "./lib/video-event-polyfill",
-    "browserify": {
-        "transform": ["babelify"]
-    },
-    "dependencies": {
-        "babelify": "^7.3.0",
-        "browserify": "^13.0.1"
-    }
+    "plugins": [
+      "browserify-derequire"
+    ]
+  },
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "browserify-derequire": "^0.9.4",
+    "uglify-js": "^2.6.2"
+  }
 }
