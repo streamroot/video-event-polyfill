@@ -8,7 +8,8 @@
     "url": "git+ssh://git@github.com:streamroot/video-event-polyfill.git"
   },
   "scripts": {
-    "build": "browserify -s VideoEventPolyfill -p browserify-derequire lib/video-event-polyfill.js | uglifyjs > dist/video-event-polyfill.js"
+    "build": "browserify -s VideoEventPolyfill -p browserify-derequire lib/video-event-polyfill.js | uglifyjs > dist/video-event-polyfill.js",
+    "prepublish": "npm run build"
   },
   "author": {
     "name": "Streamroot",
