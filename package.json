@@ -8,7 +8,7 @@
     "url": "git+ssh://git@github.com:streamroot/video-event-polyfill.git"
   },
   "scripts": {
-    "build": "mkdir -p dist && browserify lib/video-event-polyfill.js | uglifyjs > dist/video-event-polyfill.js"
+    "build": "mkdir -p dist && browserify -p browserify-derequire lib/video-event-polyfill.js | uglifyjs > dist/video-event-polyfill.js"
   },
   "author": {
     "name": "Streamroot",
@@ -21,13 +21,10 @@
     "polyfill"
   ],
   "license": "ISC",
-  "main": "dist/video-event-polyfill",
+  "main": "dist/video-event-polyfill.js",
   "browserify": {
     "transform": [
       "babelify"
-    ],
-    "plugins": [
-      "browserify-derequire"
     ]
   },
   "dependencies": {
